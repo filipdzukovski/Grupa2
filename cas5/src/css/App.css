@@ -65,3 +65,9 @@ html,body{
     margin: auto;
     outline: none;
 }
+
+#app-select{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+}
