@@ -1,5 +1,6 @@
 const initialState = {
-    greeting: "Hi !"
+    greeting: "Hi !",
+    farewell:""
 }
 
 const SayHelloReducer = (state=initialState,action) => {
@@ -10,6 +11,11 @@ const SayHelloReducer = (state=initialState,action) => {
             return{
                 ...state,
                 greeting: action.payload
+            }
+        case "FAREWELL_USER":
+            return{
+                ...state,
+                farewell:action.payload
             }
 
         default: return state;
