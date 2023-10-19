@@ -11,6 +11,7 @@ import { Provider } from "react-redux";
 import store from "./store";
 import { Login } from "./components/auth/Login";
 import { PrivateRoute } from "./utils/PrivateRoute";
+import { Posts } from "./components/posts";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -18,15 +19,13 @@ root.render(
     <Router>
       <Routes>
         <Route path="/login" index element={<Login />} />
-        <Route
-          path="/"
-          element={
+        <Route path="/" element={
             <PrivateRoute>
               <App />
             </PrivateRoute>
-          }
-        >
+          }>
           <Route path="/users" element={<Users />} />
+          <Route path="/posts" element={<Posts />} />
         </Route>
         <Route path="*" element={<Navigate to="/login" />} />
       </Routes>
