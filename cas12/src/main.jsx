@@ -12,6 +12,7 @@ import store from "./store";
 import { Login } from "./components/auth/Login";
 import { PrivateRoute } from "./utils/PrivateRoute";
 import { Posts } from "./components/posts";
+import { AlbumsWithHook } from "./components/AlbumsWithHook";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -26,6 +27,7 @@ root.render(
           }>
           <Route path="/users" element={<Users />} />
           <Route path="/posts" element={<Posts />} />
+          <Route path="/albums" element={<AlbumsWithHook/>}/>
         </Route>
         <Route path="*" element={<Navigate to="/login" />} />
       </Routes>
